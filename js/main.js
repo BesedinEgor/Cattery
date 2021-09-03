@@ -7,10 +7,10 @@ $(document).ready(function () {
         autoplay: false
     });
 
-    // $('.team__slider').slick({
-    //     arrows: true,
-    //     // fade: true,
-    //     speed: 1200,
-    //     autoplay: false
-    // });
+    $('.team__slider').slick({
+        arrows: true,
+        // fade: true,
+        speed: 1200,
+        autoplay: false
+    });
 });
