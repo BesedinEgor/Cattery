@@ -54,7 +54,7 @@ body {
     padding: 0 5px;
     margin: 0 auto;
 }
-.footer__container{
+.footer__container {
     max-width: 976px;
     margin: 0 auto;
     padding: 0 5px;
@@ -74,6 +74,13 @@ body {
     width: 100%;
     padding: 30px 0;
     margin-bottom: 70px;
+}
+.header__logo img {
+    transition: all 0.3s;
+}
+.header__logo:hover img {
+    transform: scale(1.1);
+    transition: all 0.3s;
 }
 .header__bg {
     position: absolute;
@@ -109,7 +116,13 @@ body {
 .header__social-item:not(:last-child) {
     margin-bottom: 15px;
 }
-
+.header__social-link img {
+    transition: all 0.3s;
+}
+.header__social-link:hover img {
+    transform: scale(1.3);
+    transition: all 0.3s;
+}
 .header__content {
     width: 345px;
     padding-bottom: 167px;
@@ -138,8 +151,13 @@ body {
     padding: 18px 35px;
     border: 0.5px solid #a07b50;
     color: #fff;
+    transition: all 0.4s;
 }
-
+.btn:hover {
+    border: 0.5px solid #fff;
+    color: #a07b50;
+    transition: all 0.4s;
+}
 .pets {
     margin-bottom: 83px;
 }
@@ -226,6 +244,7 @@ body {
     height: 20px;
     color: rgba(255, 255, 255, 0.2);
     font-size: 16px;
+    transition: all 0.4s;
 }
 .slick-dots li:nth-child(2) button:after {
     content: "Кошки";
@@ -391,19 +410,25 @@ body {
     background-image: url(../img/services.svg);
     background-repeat: no-repeat;
     background-position: center 60px;
-    z-index: 3;
+    transition: all 0.4s;
+    /* z-index: 3; */
+}
+.benefits__item:hover {
+    background-color: #a07b50;
+    transition: all 0.4s;
+    border-radius: 30px;
 }
 .benefits__item:nth-child(2) {
     background-image: url(../img/consultation.svg);
-    z-index: 3;
+    /* z-index: 3; */
 }
 .benefits__item:last-child {
     background-image: url(../img/meal.svg);
-    z-index: 3;
+    /* z-index: 3; */
 }
 .benefits__item:not(:nth-child(2)) .benefits__item--text {
     width: 213px;
-    z-index: 3;
+    /* z-index: 3; */
 }
 .benefits__item--text {
     width: 255px;
@@ -583,6 +608,16 @@ body {
     display: flex;
     align-items: center;
 }
+.social__link {
+    align-items: center;
+}
+.social__link img {
+    transition: all 0.3s;
+}
+.social__link:hover img {
+    transform: scale(1.3);
+    transition: all 0.3s;
+}
 .slider__social .social__link:not(:last-child) {
     margin-right: 10px;
 }
@@ -639,8 +674,13 @@ body {
     /* border: 0.5px solid #a07b50; */
     counter-increment: faq-counter;
     margin-bottom: 40px;
+    transition: all 0.4s;
 }
-.faq__items .list__btn{
+.faq__items:hover {
+    background-color: #181617;
+    transition: all 0.4s;
+}
+.faq__items .list__btn {
     position: absolute;
     background: transparent;
     border: none;
@@ -652,12 +692,21 @@ body {
     background-position: center;
     top: 0;
     right: 0;
-    border-left: .5px solid #a07b50;
+    border-left: 0.5px solid #a07b50;
     cursor: pointer;
+    border-top: 0.5px solid transparent;
+    border-right: 0.5px solid transparent;
+    border-bottom: 0.5px solid transparent;
 }
-
-.faq__items::after{
-    content: '0'counter(faq-counter);
+.faq__items:hover .list__btn {
+    background-color: #181617;
+    transition: all 0.4s;
+    border-top: 0.5px solid #a07b50;
+    border-right: 0.5px solid #a07b50;
+    border-bottom: 0.5px solid #a07b50;
+}
+.faq__items::after {
+    content: "0" counter(faq-counter);
     position: absolute;
     font-family: "Roboto", sans-serif;
     font-size: 70px;
@@ -667,33 +716,33 @@ body {
     left: -115px;
     top: 10px;
 }
-.faq__item{
-    border: .5px solid #a07b50;
+.faq__item {
+    border: 0.5px solid #a07b50;
 }
 .faq__item {
-    color: #DDD0C3;
+    color: #ddd0c3;
     padding: 40px 48px;
 }
-.faq__content{
+.faq__content {
     padding: 40px;
-    border: .5px solid #a07b50;
+    border: 0.5px solid #a07b50;
     border-top: transparent;
 }
-.faq__text-content{
+.faq__text-content {
     width: 550px;
     text-align: left;
     margin-left: 0;
     margin-bottom: 35px;
-    color: #DDD0C3;
+    color: #ddd0c3;
 }
-.faq__text-content:last-child{
+.faq__text-content:last-child {
     margin-bottom: 0;
 }
 
-.reviews{
+.reviews {
     margin-bottom: 113px;
 }
-.reviews__title{
+.reviews__title {
     text-align: center;
     margin-bottom: 58px;
 }
@@ -723,7 +772,7 @@ body {
 .reviews__info {
     width: 640px;
     padding-left: 125px;
-    background-color:#151313 ;
+    background-color: #151313;
 }
 .reviews__info blockquote {
     padding-top: 109px;
@@ -759,58 +808,79 @@ body {
     align-items: center;
 }
 
-.reviews__social{
+.reviews__social {
     display: flex;
     align-items: center;
     padding-bottom: 100px;
 }
-.reviews__social time{
+.reviews__social time {
     margin-right: 36px;
     color: #a07b50;
 }
-.slider__social--reviews>.social__link--reviews{
+.slider__social--reviews > .social__link--reviews {
     margin-right: 17px;
 }
-.social__link--reviews:last-child img{
-    padding: 10.5px 8px;
-
+.social__link--reviews:last-child img {
+    padding: 10.1px 8px;
 }
-.social__link--reviews img{
+.social__link--reviews img {
     padding: 9px 7px;
-    border: .5px solid #a07b50;
+    border: 0.5px solid #a07b50;
+    transition: all 0.4s;
+}
+.social__link--reviews:hover img {
+    transform: scale(1.1);
+    transition: all 0.4s;
 }
 
-.footer{
+.footer {
     background-color: #151313;
     padding: 60px 0;
 }
-.footer__inner{
+.footer__inner {
     display: flex;
     align-items: center;
     margin-left: 45px;
 }
-.footer__logo{
+.footer__logo {
     margin-right: 125px;
 }
-.footer__social{
+.footer__logo-link img {
+    transition: all 0.4s;
+}
+.footer__logo-link:hover img {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+.footer__social {
     display: flex;
     align-items: center;
-    
 }
-.footer-social__link:not(:last-child){
+.footer-social__link:not(:last-child) {
     margin-right: 10px;
 }
-.footer__adres-link{
-    color: #FDF2E6D4;
+.footer-social__link img {
+    width: 100%;
+    transition: all 0.4s;
+}
+.footer-social__link:hover img {
+    transform: scale(0.8);
+    transition: all 0.4s;
+}
+.footer__adres-link {
+    color: #fdf2e6d4;
     margin-left: 153px;
     margin-right: 68px;
+    transition: all .4s;
 }
-.footer-social__link img{
-    width: 100%;
+.footer__adres-link:hover,
+.footer__phone:hover{
+    color: #a07b50;
+    transition: all .4s;
 }
-.footer__phone{
+.footer__phone {
     font-weight: 700;
     font-size: 14px;
     line-height: 26px;
-    color: #FDF2E6;
+    color: #fdf2e6;
 }
