@@ -685,7 +685,7 @@ body {
     background: transparent;
     border: none;
     width: 105px;
-    height: 106px;
+    height: 100%;
     background: transparent;
     background-image: url(../img/plus-list.svg);
     background-repeat: no-repeat;
