@@ -687,7 +687,7 @@ body {
     width: 105px;
     height: 106px;
     background: #a07b50;
-    background-image: url(../img/minus-list.svg);
+    background-image: url(../img/plus-list.svg);
     background-repeat: no-repeat;
     background-position: center;
     top: 0;
@@ -697,6 +697,9 @@ body {
     border-top: 0.5px solid transparent;
     border-right: 0.5px solid transparent;
     border-bottom: 0.5px solid transparent;
+}
+.faq__items .list__btn-active {
+    background-image: url(../img/minus-list.svg);
 }
 .faq__items:hover .list__btn {
     background-color: #181617;
@@ -724,9 +727,13 @@ body {
     padding: 40px 48px;
 }
 .faq__content {
+    display: none;
     padding: 40px;
     border: 0.5px solid #a07b50;
     border-top: transparent;
+}
+.faq__items-active .faq__content {
+    display: block;
 }
 .faq__text-content {
     width: 550px;
@@ -883,4 +890,36 @@ body {
     font-size: 14px;
     line-height: 26px;
     color: #fdf2e6;
+}
+
+@media (max-width: 768px){
+    .header__container{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    .header__bg{
+        background-size: 50%;
+    }
+    .header__social-items{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-right: 11px;
+        order: 1;
+    }
+    .header__social-item{
+        margin-right: 11px;
+    }
+    .header__social-items::after{
+        display: none;
+    }
+    .header__social-item:not(:last-child){
+        margin-bottom: 0;
+    }
+    .header__social-link img{
+       width: 15px;
+       height: 15px;
+    }
+
 }
