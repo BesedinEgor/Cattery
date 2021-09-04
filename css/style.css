@@ -677,7 +677,7 @@ body {
     transition: all 0.4s;
 }
 .faq__items:hover {
-    background-color: #181617;
+    background-color: transparent;
     transition: all 0.4s;
 }
 .faq__items .list__btn {
@@ -686,13 +686,13 @@ body {
     border: none;
     width: 105px;
     height: 106px;
-    background: #a07b50;
+    background: transparent;
     background-image: url(../img/plus-list.svg);
     background-repeat: no-repeat;
     background-position: center;
     top: 0;
     right: 0;
-    border-left: 0.5px solid #a07b50;
+    border-left: 0.5px solid rgba(160, 123, 80, 0.41);
     cursor: pointer;
     border-top: 0.5px solid transparent;
     border-right: 0.5px solid transparent;
@@ -701,12 +701,12 @@ body {
 .faq__items .list__btn-active {
     background-image: url(../img/minus-list.svg);
 }
-.faq__items:hover .list__btn {
-    background-color: #181617;
+.faq__items .list__btn:hover {
+    background-color: #a07b50;
     transition: all 0.4s;
-    border-top: 0.5px solid #a07b50;
-    border-right: 0.5px solid #a07b50;
-    border-bottom: 0.5px solid #a07b50;
+    border-top: 0.5px solid rgba(160, 123, 80, 0.41);
+    border-right: 0.5px solid rgba(160, 123, 80, 0.41);
+    border-bottom: 0.5px solid rgba(160, 123, 80, 0.41);
 }
 .faq__items::after {
     content: "0" counter(faq-counter);
@@ -720,7 +720,7 @@ body {
     top: 10px;
 }
 .faq__item {
-    border: 0.5px solid #a07b50;
+    border: 0.5px solid rgba(160, 123, 80, 0.41);
 }
 .faq__item {
     color: #ddd0c3;
@@ -729,7 +729,7 @@ body {
 .faq__content {
     display: none;
     padding: 40px;
-    border: 0.5px solid #a07b50;
+    border: 0.5px solid rgba(160, 123, 80, 0.41);
     border-top: transparent;
 }
 .faq__items-active .faq__content {
